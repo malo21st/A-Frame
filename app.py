@@ -47,9 +47,9 @@ def make_html(a_code):
     return html
 
 # Layout
-st.sidebar.title("ChatGPT で A-Frame")
-order = st.sidebar.text_area("**指示を入力してください :**")
-if st.sidebar.button('**生成・修正**') and order:
+st.sidebar.title("言いなり A-Frame")
+order = st.sidebar.text_area("**命令を入力してください :**")
+if st.sidebar.button('**命令実行**') and order:
     a_code = get_a_frame(order, st.session_state['a_code'])
     st.session_state['a_code'] = a_code
     st.code(a_code, language='html')
