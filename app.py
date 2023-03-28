@@ -2,25 +2,20 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 html = """
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>MDN Games: A-Frame demo</title>
-  <script src="aframe.min.js"></script>
-</head>
-<body>
-  <!-- HTML goes here -->
-  <a-scene>
-      <a-sky color="#DDDDDD"></a-sky>
-      <a-box
-          color="#0095DD"
-          position="0 1 0"
-          rotation="20 40 0">
-      </a-box>
-  </a-scene>
-</body>
-</html>
+<html><head>
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+<script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+</head><body>
+<a-scene>
+<a-sphere position="-1 0.5 -3" rotation="0 0 0" color="#4CC3D9"></a-sphere>
+
+<a-light type=ambient color="red" position="0 5 0"></a-light>
+
+<a-entity environment="preset: egypt; groundColor: #445; grid: cross"></a-entity>
+
+</a-scene>
+</body></html>
 """
 
 components.html(html, height=720)
