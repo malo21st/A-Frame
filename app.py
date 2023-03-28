@@ -30,15 +30,14 @@ def get_a_frame(order, code):
     return code
 
 def make_html(a_code):
-    return = f"""
-<html><head>
-<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-<script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
-<script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
-</head><body>
-{a_code}
-</body></html>
-"""
+    return f"""<html><head>
+               <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+               <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+               <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+               </head><body>
+               {a_code}
+               </body></html>
+            """
 
 # Layout
 st.sidebar.title("言いなり A-Frame")
