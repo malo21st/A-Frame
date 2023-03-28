@@ -25,12 +25,7 @@ def get_a_frame(order, code):
     - 結果はコードブロックに記述。
     指示： `{order}`
     """
-    res = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo",
-    messages=[
-            {"role": "user", "content": PROMPT},
-        ]
-    )
+    res = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": PROMPT}])
     code = res.choices[0]['message']['content']
     return code
 
