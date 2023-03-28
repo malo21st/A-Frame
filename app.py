@@ -17,5 +17,5 @@ html = """
 </a-scene>
 </body></html>
 """
-
+st.write(Streamlit で A-Frame の表示テスト)
 components.html(html, height=720)
